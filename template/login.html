@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+
+    <!--页面 自定义 样式-->
+    <style>
+        #form-login .form-group{ min-height: 30px; }
+        #form-login button{ margin-right:30px; }
+    </style>
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar navbar-inverse">
+    <div class="container-fluid bg-primary">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">杂乱无章</a>
+        </div>
+    </div>
+</header>
+
+<!--主体内容-->
+<section class="container">
+    <div class="col-sm-8">
+        <img src="../static/img/login-bg.jpg" class="img-responsive"/>
+    </div>
+    <div class="col-sm-4">
+        <h2><span class="fa fa-user"> 用户登录</span></h2>
+        <form id="form-login">
+            <div class="form-group">
+                <label> 用户名：</label>
+                <input type="text" class="form-control" placeholder="输入用户名" name="username">
+            </div>
+            <div class="form-group">
+                <label> 密码：</label>
+                <input type="password" class="form-control" placeholder="输入密码" name="password">
+            </div>
+            <div class="form-group">
+                <label class="col-sm-6 checkbox-inline">
+                    <input type="checkbox"\>记住我
+                </label>
+                <label class="col-sm-6">
+                    <a href="register.html  ">点击注册</a>
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm(this)">重置</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!--底部注脚-->
+<footer class="footer bg-primary">
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+</footer>
+
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+
+<!--页面 自定义 JS-->
+<script>
+    $(function () {
+
+    })
+</script>
+</body>
+</html>

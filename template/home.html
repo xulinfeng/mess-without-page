@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+    <!--页面 自定义 样式-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url("../static/img/白刷.png");
+        }
+        .form-inline{
+            margin-top: 3px;
+        }
+        .nav-item .nav-link{
+            color: blue;
+        }
+        /*导航*/
+        .navbar .nav{
+            background-color: white;
+            margin-bottom: 0;
+        }
+        /*主体*/
+        .header-image{
+            height: 440px;
+            width: 100%;
+            background-image: url("../static/img/header.jpg");
+            background-size: 100% 550px;
+            color: white;
+        }
+        h1,hr{
+            padding-top: 50px;
+            font-size: 70px;
+        }
+        .message{
+            width: 100%;
+            height: 280px;
+            background-color:white;
+        }
+        .message p{
+            color: blue;
+        }
+        .font{
+
+            line-height: 30px;
+        }
+        #btn_top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+        }
+        .container-fluid1{
+            background-image: url("../static/img/header1.jpg");
+            background-size: 100% 400px;
+        }
+        .container-fluid2{
+            background-image: url("../static/img/header2-img.jpeg");
+            background-size: 100% 400px;
+        }
+        .container-fluid3{
+            background-image: url("../static/img/header3.img.jpeg");
+            background-size: 100% 400px;
+        }
+        .container-fluid4{
+            background-image: url("../static/img/header4-img.jpg");
+            background-size: 100% 400px;
+        }
+        #accordion h3{
+            background-color: slategray
+
+        }
+        /*图四动画*/
+        #div1 {
+            position: relative;
+            margin: auto;
+            height: 150px;
+            width: 300px;
+            padding: 10px;
+            /*border: 1px solid black;*/
+            /* Chrome, Safari, Opera */
+            -webkit-perspective: 125px;
+            -webkit-animation: mymove 5s infinite;
+            /* Standard syntax */
+            perspective: 125px;
+            animation: mymove 5s infinite;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes mymove {
+            50% {-webkit-perspective-origin: 10px 50%;}
+        }
+
+        /* Standard syntax */
+        @keyframes mymove {
+            50% {perspective-origin: 10px 50%;}
+        }
+
+        #div2 {
+            padding: 55px;
+            position: absolute;
+            border: 1px solid black;
+            /*background-color: coral;*/
+            -webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera */
+            transform: rotateX(45deg);
+        }
+        section .container{
+            box-shadow: 10px 10px 5px 	#696969;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar " >
+    <!-- 导航栏 -->
+    <ul class="nav nav-tabs " >
+        <li class="nav-item col-md-1">
+            <img src="../static/img/header-image.jpg" style="height: 30px;width: 80px;padding-top: 6px">
+        </li>
+        <li class="nav-item col-md-1" style="display: inline">
+            <a class="nav-link active" href="home.html">首页</a>
+            <!--fa fa-home-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link  " href="moments.html">片刻</a>
+            <!--fa fa-chrome-->
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link " href="reader.html">阅读</a>
+            <!--fa fa-stack-exchange-->
+        </li>
+        <!--<li class="nav-item col-md-1">-->
+            <!--<a class="nav-link 	fa fa-youtube-play" href="radio-station.html">电台</a>-->
+        <!--</li>-->
+        <li class="nav-item col-md-1">
+            <a class="nav-link disabled " href="about.html">关于</a>
+            <!--fa fa-joomla-->
+        </li>
+        <!--搜索框-->
+        <li class="nav-item col-md-4 ">
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search Something">
+                <button class="btn btn-default" type="button">搜索</button>
+            </form>
+        </li>
+        <li class="nav-item col-md-1 col-sm-offset-1">
+            <a class="nav-link " href="login.html" >登录</a>
+            <!--fa fa-user-circle-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link" href="register.html">注册</a>
+            <!--fa fa-address-card-o-->
+        </li>
+    </ul>
+</header>
+<!--主体内容-->
+<section class="container-fluid">
+
+    <div class="header-image text-center fa " data-toggle="tooltip" data-placement="top" title="欢迎来到杂乱无章，这里收集了那些不太愿意迎合的年轻人">
+        <h1 >Soul meets mids.</h1>
+        <hr style="width: 500px;height:10px;margin-left: 420px">
+        <h2>有趣的灵魂终将相遇。</h2>
+    </div>
+    <div class="message">
+        <div class=" text-center "style="padding-top: 10px;padding-bottom: 10px">
+            <img src="../static/img/zaluan_logo.jpg">
+
+        </div>
+        <div class="font col-sm-10 col-sm-offset-1 ">
+            <p ><kbd style="color: blue;font-size: larger">杂乱无章</kbd><kbd>是致力于创造青年人对话与实践成长的教育机构。自2012年成立以来，已经有数千名大学生线下深度参与到北辰青年项目中，更有几十万名大学生通过互联网进行线上参与。首创的YES GO（Young Entrepreneurs and Students Going Out）青年成长社群模式，将企业家、职场人士与大学生三种身份融入同一组织，在传统教育之外，带给每个青年人视野、交流、实践等全方位的历练与提升，被誉为真正“还原教育的本来模样”</kbd></p>
+        </div>
+
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+        </div>
+    </nav>
+    <!--杂乱无章-->
+    <div class="container-fluid " style="height: 400px;background-color: slategrey">
+        <div class="imga col-sm-2" >
+            <img  src="../static/img/za.gif" style="width: 340px;height: 340px;margin-top: 30px;border:2px solid #a1a1a1;border-radius:25px;">
+
+        </div>
+        <div  class="container col-sm-6 col-sm-offset-3" style="background-color:  gainsboro;height: 300px;margin-top: 50px">
+            <div class="card  ">
+                <div class="card-body">
+                    <h4 class="card-title text-center"><kbd>缘浅缘深，如溪如河</kbd></h4>
+                    <img src="../static/img/1.jpeg" class="img-circle col-sm-1" style="width: 200px;height: 170px">
+                    <p class="card-text"> <code> 2018/6/5</code>天还未明，雾气弥漫。
+                        我在机场等待航班间隙买了杯热饮，是你喜欢喝的红茶。
+                        以前看着杯中茶色，整个人就感觉到暖，好像被人拥抱一般。
+                        现在心头还是会有这样的温度，但相比过去，已经疏淡很多，许是因你不在的缘故。
+                        身边旅客逐渐多起来。
+                        灰色的大衣、略显蓬乱的头发、飘忽的眼神、脸上散发出洁面乳的味道，相比于其他时段的乘客，坐早班机和深夜航班的乘客要显得憔悴、窘迫、忧心忡忡。
+                       .</p>
+                    <a href="http://pianke.me/pages/read/articleInfo.html?id=5a55ab9c4cfcf3185684d9cd" class="card-link fa fa-columns">阅读</a>
+                    <a  class="opener card-link fa fa-heart">收藏</a>
+                </div>
+            </div>
+        </div>
+        <!--//折叠-->
+        <!--<div class="container col-sm-10 float-right" style="padding-top: 30px">-->
+            <!--<button type="button" class="btn btn-primary col-sm-1 col-sm-offset-6 fa fa-hand-o-up" data-toggle="collapse" data-target="#demo"></button>-->
+            <!--<div id="demo" class="collapse">-->
+
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="container-fluid " style="height: 400px;background-color: gainsboro">
+        <div class="imga col-sm-2 col-sm-offset-8" >
+            <img  src="../static/img/luan.jpg" style="width: 340px;height: 340px;margin-top: 30px;border:2px solid #a1a1a1;border-radius:25px;">
+        </div>
+        <div class="container col-sm-6 " style="background-color: grey;height: 300px;margin-top: -330px;margin-left: 30px">
+            <div class="card  ">
+                <div class="card-body">
+                    <h4 class="card-title text-center"><kbd>梦侦</kbd></h4>
+                    <img src="../static/img/2.jpg" class="img-circle col-sm-1" style="width: 200px;height: 170px">
+                    <p class="card-text" style="color:snow "> <code> 2018/9/20</code>{暗区回忆}死者叫彭望，在睡梦中被刀刺中心脏死亡。行凶者是他的妻子张姝，她说有人在梦中控制她，让她从床上起来，到厨房拿刀，往丈夫身上扎三次，复睡下。清晨手摸到黏湿的床单，疑惑醒来，看到一片红，刀就在身边。张姝的睡袍也染了大片血。她唇色白，瑟瑟发抖，蓬松的长发中掺杂白丝，似乎是一夜之间冒出。双眼干涸，鱼尾纹在蜡黄的肤上像土地裂痕。脸腮凹陷，致颧骨突出，整个人干瘪，像身内有黑洞，使她日渐收缩</p>
+                    <a href="http://pianke.me/pages/read/articleInfo.html?id=59e6f3864cfcf3dc2784d9c6" class="card-link fa fa-columns">阅读</a>
+                    <a  class="opener card-link fa fa-heart">收藏</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid " style="height: 400px;background-color: slategrey">
+        <div class="imga col-sm-2" >
+            <img src="../static/img/wu1.gif" style="width: 340px;height: 340px;margin-top: 30px;border:2px solid #a1a1a1;border-radius:25px;">
+        </div>
+        <div class="container col-sm-6 col-sm-offset-3" style="background-color: lightgrey;height: 300px;margin-top: 50px">
+            <div class="card  ">
+                <div class="card-body">
+                    <h4 class="card-title text-center"><kbd>这个世界藏着很多爱</kbd></h4>
+                    <img src="../static/img/3.jpg" class="img-circle col-sm-1" style="width: 200px;height: 170px">
+                    <p class="card-text">
+                        记 <code>2018.10.23</code>
+                        第一次一个人爬山
+                        之前的傍晚，我常从住的房子望出去，看远处的山。问人，那是哪里。然后，想着总要有天爬上去。
+                        我一路走，戴着耳机，循环播放一首歌。去山的路上，种了银杏，叶子和果实落下，道路被装饰，一个老妇人推着孙子，在捡银杏果。听说，盐焗银杏很好吃。如果我下次来，一定会带个纸袋，我这么想着，来到山下。
+                    </p>
+                    <a href="http://pianke.me/pages/read/articleInfo.html?id=5bcf47c4257be9755e32e7ea" class="card-link fa fa-columns">阅读</a>
+                    <a  class="opener card-link fa fa-heart">收藏</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " style="height: 400px;background-color: gainsboro;">
+        <div class="imga col-sm-2 col-sm-offset-8" >
+            <img  src="../static/img/zhang1.jpg" style="width: 340px;height: 340px;margin-top: 30px;border:2px solid #a1a1a1;border-radius:25px;">
+        </div>
+        <div class="container col-sm-6 " style="background-color:slategrey;height: 280px;margin-top: -300px;margin-left: 30px">
+            <div class="card  ">
+                <div class="card-body">
+                    <h4 class="card-title text-center"><kbd>日子可爱又漫长</kbd></h4>
+                    <img src="../static/img/4.jpg" class="img-circle col-sm-1" style="width: 200px;height: 170px">
+                    <p class="card-text" style="color: snow">
+                       <code> 2018/10/21</code>
+                        周日早上七点多醒来，简单洗漱，练完瑜伽给自己煮了碗南瓜粥喝。之后打扫房间，洗漱，给爸妈打电话，午睡。
+                        下午一人到广州图书馆看书。周末的图书馆人很多，座位都被早早来学习的中学生们给占了。我挑了一本书，找了一个偏僻的角落里席地而坐，静静地看书，看到忘却时间，这份专注和陶醉是一种享受。
+                    </p>
+                    <a href="http://pianke.me/pages/read/articleInfo.html?id=5bd30af1257be9f63432e7e0" class="card-link fa fa-columns">阅读</a>
+                    <a  class="opener card-link fa fa-heart">收藏</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--首页四张大图-->
+    <div class="container-fluid1" style="height: 400px;background-color: grey">
+
+            <h1 class="col-sm-5 col-sm-offset-1 " style="padding-top: 100px;color: white;text-shadow: 5px 5px 5px blue;">J'AI TROUVÉ</h1><br>
+        <h4 class="col-sm-6 col-sm-offset-2" style="text-shadow: 5px 5px 5px blue;">TV / <a href="#" data-toggle="tooltip" title="杂乱无章">Concepts</a> / ?></h4>
+
+        <a href="https://www.ssyer.com/home" class="col-sm-1 col-sm-offset-11	fa fa-chevron-circle-right fa-4x" style="margin-top: -70px;text-decoration: none"></a>
+
+    </div>
+    <div class="container-fluid2" style="height: 400px;background-color: gainsboro">
+        <h1 class="col-sm-5 col-sm-offset-1" style="margin-top: 30px;color: black;text-shadow: 5px 5px 5px white;">75 TH ANNIVERSARY BRANDING</h1><br>
+        <h4 class="col-sm-6 col-sm-offset-2 " style="color: white;text-shadow: 5px 5px 5px white;">Branding /<a href="#" data-toggle="tooltip" title="杂乱无章"> Logo </a>/ Print design / Design</h4>
+        <a href="#" class="col-sm-1 col-sm-offset-11	fa fa-chevron-circle-right fa-4x" style="margin-top: -170px;text-decoration: none"></a>
+        <div  >
+
+        </div>
+    </div>
+    <div class="container-fluid3" style="height: 400px;background-color: grey">
+        <a href="https://www.ssyer.com/home" class="col-sm-1 col-sm-offset-11	fa fa-chevron-circle-right fa-4x" style="padding-top: 190px;text-decoration: none"></a>
+        <div class="col-sm-2" >
+
+        </div>
+    </div>
+    <div class="container-fluid4" style="height: 400px;background-color: gainsboro;">
+        <!--图四动画-->
+        <div id="div1">
+            <div id="div2"><kbd>现代人</kbd>一一情不敢至深，恐大梦一场，卦不敢算尽，畏天道无常！ 渐渐看清楚自己的位置是个无比漫长的过程
+                # 一见钟情的句子 #</div>
+        </div>
+        <a href="#" class="col-sm-1 col-sm-offset-11	fa fa-chevron-circle-right fa-4x" style="padding-top: 30px;text-decoration: none"></a>
+        <div class="col-sm-2 col-sm-offset-8" >
+
+        </div>
+    </div>
+    <!--内容折叠-->
+
+    <div id="accordion" class="text-center" style="background-color: slategray;">
+        <h3 >地址</h3>
+        <div >
+            <p> <kbd>地址：</kbd>广东省中山市石岐区学院路电子科技大学中山学院</p><br>
+            <P>A实验楼201</P>
+        </div>
+        <h3 style="background-color: slategray">联系我们</h3>
+        <div >
+            <p>
+                <kbd>QQ:</kbd>2088670257<br>
+               <kbd>邮箱：</kbd> beichen@yes-go.cn<br>
+
+            </p>
+        </div >
+        <h3>投稿</h3>
+        <div class="left">
+            <p>写给未来会给我们投稿的你</p>
+
+              <p>
+                  <kbd>题材：</kbd>对于题材来说，从来不会设限，文章的字数在1500字 - 2500 字之间为好。<br>
+                  <kbd>内容：</kbd>对于内容，“走心”是我们最重要的标准。而另外，我们也希望关注大家正在关注、在乎的事情。<br>
+                  <kbd>方式：</kbd>投稿格式方面，希望你以添加 Word 文档到附件,方便查看和修改。<br>
+                  <kbd>方式：</kbd>我们的税前稿费是：1000 元，以后也会继续提高。
+
+              </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!--底部注脚-->
+<div class="jumbotron text-center" style="margin-bottom:0;background-color: slategray;height: 200px">
+    <div class="logo-bottom col-sm-1 "><img src="../static/img/logo_bottom.png"></div>
+    <p style="font-size: medium;color: white">复杂世界里，一个就够了.One is all</p><br>
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+
+    <div class="col-sm-4 col-sm-offset-4"><p class="col-sm-offset-1 fa fa-facebook-official "></p><p class="col-sm-offset-1 fa fa-github"></p><p class=" col-sm-offset-1 fa fa-qq"></p><p class=" col-sm-offset-1 fa fa-snapchat"></p></div>
+    <div class="col-sm-1 col-sm-offset-10 " style="margin-top: -110px" ><img src="../static/img/scan.png"></div>
+</div>
+<!--收藏提示框-->
+<div id="dialog" class="text-success" title="提示" >
+    <p>收藏成功</p>
+</div>
+<!--置顶按钮-->
+<button id="btn_top" class="fa fa-arrow-circle-up text-success fa-2x " style="width: 40px;height: 40px" title="回到顶部">
+</button>
+
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+<!--页面 自定义 JS-->
+<script>
+
+
+    // 回到顶部
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 50) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        });
+    });
+    $('#btn_top').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 500);
+    });
+     // 折叠
+    $(function() {
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+        $( "#accordion" ).accordion({
+            icons: icons
+        });
+        $( "#toggle" ).button().click(function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    });
+// 收藏提示框
+    $(function() {
+        $( "#dialog" ).dialog({
+            autoOpen: false,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            }
+        });
+
+        $( ".opener" ).click(function() {
+            $( "#dialog" ).dialog( "open" );
+        });
+    });
+
+
+</script>
+</body>
+</html>

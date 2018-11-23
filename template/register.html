@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+
+    <!--页面 自定义 样式-->
+    <style>
+        #form-register .form-group{
+            margin-left: 50%;
+            margin-top: 30px;
+            text-align: right;
+            transform: translate(-70%,-50%);
+        }
+        #form-register .form-group .form-control{
+            width: 200px;
+        }
+        .red{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar navbar-inverse ">
+    <div class="container-fluid bg-primary">
+        <div class="navbar-header ">
+            <a class="navbar-brand" href="#">杂乱无章</a>
+        </div>
+    </div>
+</header>
+
+<!--主体内容-->
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="fa fa-user"> 用户注册</span>
+                </div>
+                <div class="panel-body">
+                    <form id="form-register" class="form-horizontal">
+                        <div class="form-group form-inline">
+                            用户名：<input type="text" class="form-control" placeholder="输入用户名" name="username">
+                            <label class="red">*</label>
+                        </div>
+                        <div class="form-group form-inline">
+                            密码：<input type="password" class="form-control" placeholder="输入密码" name="password">
+                            <label class="red">*</label>
+                        </div>
+                        <div class="form-group form-inline">
+                            重复密码：<input type="password" class="form-control" placeholder="重复输入密码" name="passwordagain">
+                            <label class="red">*</label>
+                        </div>
+                        <div class="form-group form-inline">
+                            电子邮箱：<input type="text" class="form-control" placeholder="输入电子邮箱" name="email">
+                            <label class="red">*</label>
+                        </div>
+                        <div class="form-group form-inline">
+                            手机号码：<input type="text" class="form-control" placeholder="输入手机号码" name="phone">
+                            <label>&nbsp</label>
+                        </div>
+                        <div class="form-group form-inline">
+                            姓名：<input type="text" class="form-control" placeholder="输入姓名" name="name">
+                            <label>&nbsp</label>
+                        </div>
+                        <div class="form-group form-inline" style="margin-left:150px">
+                            性别：<input type="radio" name="sex" value="male">男
+                            <input type="radio" name="sex" value="famale">女
+                        </div>
+                        <div class="form-group" style="text-align: left">
+                            <button type="button" class="btn btn-primary" style="margin-left:30px;margin-right:30px ">确定</button>
+                            <button type="button" class="btn btn-danger" onclick="resetForm(this)">重置</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--底部注脚-->
+<footer class="footer bg-primary">
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+</footer>
+
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+
+<!--页面 自定义 JS-->
+<script>
+    $(function () {
+
+    })
+</script>
+</body>
+</html>

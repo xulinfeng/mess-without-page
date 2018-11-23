@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+    <!--页面 自定义 样式-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form-inline{
+            margin-top: 3px;
+        }
+        .nav-item .nav-link{
+            color: blue;
+        }
+        /*导航*/
+        .navbar .nav{
+            background-color: white;
+            margin-bottom: 0;
+        }
+
+        h1,hr{
+            padding-top: 50px;
+            font-size: 70px;
+        }
+
+        .message p{
+            color: blue;
+        }
+
+        #btn_top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+        }
+
+        #accordion h3{
+            background-color: slategray
+
+        }
+        .container-fluid .img-about{
+            background-image: url("../static/img/about-header.png");
+           height: 300px;
+        }
+        .container-fluid .about-people{
+            background-color: gainsboro;
+            height: 800px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .container-fluid .about-massage{
+            background-color: gainsboro;
+            height: 650px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color:black;
+
+        }
+        .container-fluid .card{
+            float: left;
+            margin: 30px 65px;
+            height: 350px;
+        }
+        .card-img-top:hover{
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar " >
+    <!-- 导航栏 -->
+    <ul class="nav nav-tabs " >
+        <li class="nav-item col-md-1">
+            <img src="../static/img/header-image.jpg" style="height: 30px;width: 80px;padding-top: 6px">
+        </li>
+        <li class="nav-item col-md-1" style="display: inline">
+            <a class="nav-link active" href="home.html">首页</a>
+            <!--fa fa-home-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link  " href="moments.html">片刻</a>
+            <!--fa fa-chrome-->
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link " href="reader.html">阅读</a>
+            <!--fa fa-stack-exchange-->
+        </li>
+        <!--<li class="nav-item col-md-1">-->
+        <!--<a class="nav-link 	fa fa-youtube-play" href="radio-station.html">电台</a>-->
+        <!--</li>-->
+        <li class="nav-item col-md-1">
+            <a class="nav-link disabled " href="about.html">关于</a>
+            <!--fa fa-joomla-->
+        </li>
+        <!--搜索框-->
+        <li class="nav-item col-md-4 ">
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search Something">
+                <button class="btn btn-default" type="button">搜索</button>
+            </form>
+        </li>
+        <li class="nav-item col-md-1 col-sm-offset-1">
+            <a class="nav-link " href="login.html" >登录</a>
+            <!--fa fa-user-circle-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link" href="register.html">注册</a>
+            <!--fa fa-address-card-o-->
+        </li>
+    </ul>
+</header>
+<!--主体内容-->
+<section class="container-fluid">
+        <div class="img-about" ></div>
+          <!--人物介绍-->
+        <div class="about-people  col-sm-10 col-sm-offset-1 text-center">
+
+            <div class="card" style="width:200px">
+                <img class="card-img-top img-circle" src="http://cdn.lizhi.fm/audio_cover/2016/06/29/29582892943472519.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">黄子华</h4>
+                    <p class="card-text">杂乱无章创始人、CEO<br>成长，并帮助他人成长。</p>
+                    <a href="#" class="btn btn-primary">查看主页</a>
+                </div>
+            </div>
+
+            <div class="card" style="width:200px">
+                <img class="card-img-top img-circle" src="http://www.people.com.cn/mediafile/pic/20160826/58/15008634063883682642.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">黄宗泽</h4>
+                    <p class="card-text">杂乱无章创始人、COO<br>持续探索人的互动，致力于社群式教育实践.</p>
+                    <a href="#" class="btn btn-primary">查看主页</a>
+                </div>
+            </div>
+            <div class="card" style="width:200px">
+                <img class="card-img-top img-circle" src="http://p1.qhimgs4.com/t01919e2aacd77e575b.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">林峰</h4>
+                    <p class="card-text">杂乱无章创始人、常务副总<br>休学公益创业的社会学人，怀揣教。</p>
+                    <a href="#" class="btn btn-primary">查看主页</a>
+                </div>
+            </div>
+
+            <div class="card" style="width:200px">
+                <img class="card-img-top img-circle" src="https://www.yyfensi.com/uploads/180417/22_03021130321110.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">钟嘉欣</h4>
+                    <p class="card-text">常务副总<br>成长就是在不经意的付出中。</p>
+                    <a href="#" class="btn btn-primary">查看主页</a>
+                </div>
+            </div>
+
+            <div class="card" style="width:200px">
+                <img class="card-img-top img-circle" src="http://puui.qpic.cn/vstar_pic/0/name_72869_688t1505788816.jpg/0" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">周柏豪</h4>
+                    <p class="card-text">自媒体中心<br>在这个荒诞的世界，偏爱无意义。</p>
+                    <a href="#" class="btn btn-primary">查看主页</a>
+                </div>
+            </div>
+            <div class="card" style="width:200px">
+                <img class="card-img-top img-circle" src="http://pic.wenwen.soso.com/p/20071121/20071121204452-144438650.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">薛凯琪</h4>
+                    <p class="card-text">全国校园团队运营中心<br>望尘莫及</p>
+                    <a href="#" class="btn btn-primary">查看主页</a>
+                </div>
+            </div>
+
+        </div>
+          <!--信息介绍-->
+        <div class="about-massage  col-sm-10 col-sm-offset-1 text-center" style="line-height: 30px">
+            <h3 style="color: blue">  <kbd>杂乱无章</kbd>2015 年发展里程碑 MILESTONES</h3>
+
+            <h4><kbd>2015.3-6第一期YES GO封闭营</kbd></h4>
+
+            <p>首期YES GO封闭营经过一番激烈筛选，最终确定了21名来自各大高校的大学生小趴，和来自各行业岗位的职场大趴，共同参与到为期3个月的封闭营行动，期间经历了「竞技」、「公益」、「商业」、「户外」、「艺术」、「创业」六大板块的课程，最终通过考核的大小趴在厦门迎来了毕业典礼。
+
+            2015.5正式成为广州市公益创投立项项目
+
+                经过多轮考核，<kbd>杂乱无章</kbd>YES GO封闭营从众多项目中脱颖而出，成为第二届广州市政府公益创投立项资助项目，与其他115个公益项目共同在政府认可与扶持下成长。</p>
+
+            <h4><kbd>2015.6 PA Club成立</kbd></h4>
+
+
+            <p>首期YES GO封闭营的结束，也意味着<kbd>杂乱无章</kbd>PA Club正式成立！从YES GO封闭营顺利毕业的大小趴将会进入终身俱乐部PA Club，共同做更多有价值、有意思的事情，继续在青年成长这条路上摸索前进！</p>
+
+           <h4> <kbd>2015.7杂乱无章旗帜飘扬在北极点</kbd></h4>
+
+
+           <p> <kbd>杂乱无章</kbd> 联合拙见中国，启动北极行活动，将<kbd>杂乱无章</kbd>的旗帜带到北极，飘扬在北极点上空，让世界听清青年人的声音！</p>
+
+            <h4><kbd>2015.10-12第一期YES GO商学院</kbd></h4>
+
+            <p>深度链接大学生跟企业的「YES GO商学院」，致力于打造并实现“青年人才商业成长”与“企业自身创新实践”的完美匹配。 商业比赛、创意课堂、飞黄腾达行动等，均将YES GO模式带入企业，打造企业内部的商学院，使得大学生、职场人士一起参与到企业的品牌推广、市场营销、拓展销售、人力资源管理等方方面面。</p>
+
+            <h4><kbd>2015.12 YES GO创想家行动启动</kbd></h4>
+
+            <p>打造青年创业者与企业家的深度社群，助力有创业梦想的青年大学生。<kbd>杂乱无章</kbd>聚集华南高校创业学生，与企业家们一起，共同经历「飞黄腾达」、「读书共修」、「深夜食堂」、「项目实操」等等，一起经历团队PK作战、学习成长、互动交流。让有梦想且正在付诸于行动的创想家们集结汇聚、共同成长。</p>
+
+        </div>
+
+</section>
+
+<!--内容折叠-->
+
+<div id="accordion" class="text-center" style="background-color: slategray;">
+    <h3 >地址</h3>
+    <div >
+        <p> <kbd>地址：</kbd>广东省中山市石岐区学院路电子科技大学中山学院</p><br>
+        <P>A实验楼201</P>
+    </div>
+    <h3 style="background-color: slategray">联系我们</h3>
+    <div >
+        <p>
+            <kbd>QQ:</kbd>2088670257<br>
+            <kbd>邮箱：</kbd> beichen@yes-go.cn<br>
+
+        </p>
+    </div >
+    <h3>投稿</h3>
+    <div class="left">
+        <p>写给未来会给我们投稿的你</p>
+
+        <p>
+            <kbd>题材：</kbd>对于题材来说，从来不会设限，文章的字数在1500字 - 2500 字之间为好。<br>
+            <kbd>内容：</kbd>对于内容，“走心”是我们最重要的标准。而另外，我们也希望关注大家正在关注、在乎的事情。<br>
+            <kbd>方式：</kbd>投稿格式方面，希望你以添加 Word 文档到附件,方便查看和修改。<br>
+            <kbd>方式：</kbd>我们的税前稿费是：1000 元，以后也会继续提高。
+
+        </p>
+
+    </div>
+
+</div>
+<!--底部注脚-->
+<div class="jumbotron text-center" style="margin-bottom:0;background-color: slategray;height: 200px">
+    <div class="logo-bottom col-sm-1 "><img src="../static/img/logo_bottom.png"></div>
+    <p style="font-size: medium;color: white">复杂世界里，一个就够了.One is all</p><br>
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+
+    <div class="col-sm-4 col-sm-offset-4"><p class="col-sm-offset-1 fa fa-facebook-official "></p><p class="col-sm-offset-1 fa fa-github"></p><p class=" col-sm-offset-1 fa fa-qq"></p><p class=" col-sm-offset-1 fa fa-snapchat"></p></div>
+    <div class="col-sm-1 col-sm-offset-10 " style="margin-top: -110px" ><img src="../static/img/scan.png"></div>
+</div>
+
+<!--置顶按钮-->
+<button id="btn_top" class="fa fa-arrow-circle-up text-success fa-2x " style="width: 40px;height: 40px" title="回到顶部">
+</button>
+
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+<!--页面 自定义 JS-->
+<script>
+
+
+    // 回到顶部
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 50) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        });
+    });
+    $('#btn_top').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 500);
+    });
+    // 底部折叠
+    $(function() {
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+        $( "#accordion" ).accordion({
+            icons: icons
+        });
+        $( "#toggle" ).button().click(function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    });
+</script>
+</body>
+</html>

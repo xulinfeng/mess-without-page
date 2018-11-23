@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+    <!--页面 自定义 样式-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form-inline{
+            margin-top: 3px;
+        }
+        .nav-item .nav-link{
+            color: blue;
+        }
+        /*导航*/
+        .navbar .nav{
+            background-color: white;
+            margin-bottom: 0;
+        }
+
+        h1,hr{
+            padding-top: 50px;
+            font-size: 70px;
+        }
+
+        .message p{
+            color: blue;
+        }
+
+        #btn_top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+        }
+
+        #accordion h3{
+            background-color: slategray
+
+        }
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        body{
+            background-image: url("../static/img/白刷.png");
+        }
+        #Articles{
+            height: auto;margin-top: 30px;margin-bottom: 10px;background-color: gainsboro;
+        }
+        /*详细分类*/
+        div.img {
+            margin:5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.img:hover {
+            border: 1px solid #777;
+        }
+
+        div.img img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        /*阴影*/
+        /*section .responsive{*/
+        /*box-shadow: 10px 10px 5px #888888;*/
+        /*}*/
+
+        .text-center a img:hover {
+            border: 1px solid black;
+        }
+
+        #Articles .article-info-box .article-title a{
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+
+
+
+        }
+        #Articles .article-info-box .article-title a:hover{
+            background-color: blue;
+        }
+        #Articles1 .article-info-box .article-title a:hover{
+            background-color: blue;
+        }
+        #Articles2 .article-info-box .article-title a:hover{
+            background-color: blue;
+        }
+
+        #Articles1 .article-info-box .article-title a{
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+
+        }
+        #Articles2 .article-info-box .article-title a{
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+
+        }
+        section .responsive .desc{
+            background-color: #888888;
+        }
+        /*碎片*/
+        #Articles，.responsive a.img{
+            border: 1px solid #ccc;
+    }
+
+
+
+        #Articles，.responsive a.img:hover {
+            border: 1px solid #777;
+        }
+
+        #Articles，.responsive .img img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #Articles  .responsive {
+            padding: 0 20px;
+           float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px){
+           #Articles .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px){
+            #Articles  .responsive {
+                width: 100%;
+            }
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /*masonry实现瀑布流*/
+        * { box-sizing: border-box; }
+
+        body { font-family: sans-serif; }
+
+        /* ---- grid ---- */
+
+        .grid {
+            background: #EEE;
+            max-width: 1200px;
+        }
+
+        /* clearfix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ---- grid-item ---- */
+
+        .grid-item {
+            width: 160px;
+            height: 120px;
+            float: left;
+            background: #D26;
+            border: 2px solid #333;
+            border-color: hsla(0, 0%, 0%, 0.5);
+            border-radius: 5px;
+        }
+
+        .grid-item--width2 { width: 320px; }
+        .grid-item--width3 { width: 480px; }
+        .grid-item--width4 { width: 640px; }
+
+        .grid-item--height2 { height: 200px; }
+        .grid-item--height3 { height: 260px; }
+        .grid-item--height4 { height: 360px; }
+
+
+        .grid-item--gigante {
+            width: 320px;
+            height: 360px;
+            z-index: 2; /* above other items */
+        }
+
+        .grid-item:hover {
+            background: #A2C;
+            border-color: white;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar " >
+    <!-- 导航栏 -->
+    <ul class="nav nav-tabs " >
+        <li class="nav-item col-md-1">
+            <img src="../static/img/header-image.jpg" style="height: 30px;width: 80px;padding-top: 6px">
+        </li>
+        <li class="nav-item col-md-1" style="display: inline">
+            <a class="nav-link active" href="home.html">首页</a>
+            <!--fa fa-home-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link  " href="moments.html">片刻</a>
+            <!--fa fa-chrome-->
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link " href="reader.html">阅读</a>
+            <!--fa fa-stack-exchange-->
+        </li>
+        <!--<li class="nav-item col-md-1">-->
+        <!--<a class="nav-link 	fa fa-youtube-play" href="radio-station.html">电台</a>-->
+        <!--</li>-->
+        <li class="nav-item col-md-1">
+            <a class="nav-link disabled " href="about.html">关于</a>
+            <!--fa fa-joomla-->
+        </li>
+        <!--搜索框-->
+        <li class="nav-item col-md-4 ">
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search Something">
+                <button class="btn btn-default" type="button">搜索</button>
+            </form>
+        </li>
+        <li class="nav-item col-md-1 col-sm-offset-1">
+            <a class="nav-link " href="login.html" >登录</a>
+            <!--fa fa-user-circle-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link" href="register.html">注册</a>
+            <!--fa fa-address-card-o-->
+        </li>
+    </ul>
+</header>
+
+
+<!--主体内容-->
+<section class="container-fluid" >
+
+    <div id="myCarousel" style="height: 370px;background-color:  lightgrey">
+        <!--日历-->
+        <div id="datepicker"class="carousel slide col-sm-2 col-sm-offset-1 "  style="height: 300px;width:250px;margin-top: 60px;"></div>
+        <!--发表框-->
+        <div class= " col-sm-7 col-sm-offset-1 " style="height: 300px;margin-top: 30px;background-color: white">
+            <div class="publist-content">
+    <textarea class="col-sm-10 col-sm-offset-1 info"  style="color: blue;height: 140px;margin-top: 25px;background-color: gainsboro" placeholder="这一刻，你想说什么？"></textarea>
+                <div class="timeline-othres col-sm-12">
+                    <div class="btn-group btn-group-xs col-sm-2 col-sm-offset-1" style="margin-top: 5px">
+                        <button  type="button" class="btn btn-primary ">公开</button>
+                        <button type="button" class="btn btn-primary ">秘密</button>
+                    </div>
+                    <div class="timeline-tag col-sm-2">
+                        <div class="btn-group btn-group-xs col-sm-2 col-sm-offset-1 " style="margin-top: 5px">
+                            <button class="fa fa-picture-o"  type="button" class="btn btn-primary"></button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-tag col-sm-2">
+                        <div class="btn-group btn-group-xs col-sm-2 col-sm-offset-1" style="margin-top: 5px">
+                            <button  type="button" class="btn btn-primary 	fa fa-tag"> #添加标签</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-1">
+                        <div class="btn-group btn-group-xs col-sm-2 col-sm-offset-1" style="margin-top: 5px">
+                            <button  type="button" class="btn btn-primary fa fa-paper-plane">发布碎片</button>
+                        </div>
+                    </div>
+                    <div class="timeline-word-number col-sm-2"  style="margin-top: 5px">0/140 <span>字</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--分类标题-->
+    <div class=" col-sm-10 col-sm-offset-1 "  style="height: 50px;margin-top: 30px;margin-bottom: 20px;background-color: lightgrey">
+        <h3 class="fa fa-bookmark " >热门标签</h3>
+
+    </div>
+    <div class="col-sm-10 col-sm-offset-1 " style="height: 350px;margin-top: 30px;margin-bottom: 20px;background-color: gainsboro">
+        <!--详细分类-->
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo1.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/978b2fe39436aca13338894a2c862f27.jpg" alt="早安故事" title="早安故事" width="300" height="300">
+                </a>
+                <div class="desc  " style="background-color: #888888"><kbd>悄悄话/46754</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo2.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/4a62a188b2d203cf32acf4d5b2fa9ca2.jpg" alt="晚安故事" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>戳心歌词/523</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/826ad7855d2f45a6f417ab35ac2e5d22.jpg"alt="生活范" width="300" height="200">
+                </a>
+                <div class="desc " ><kbd>一见钟情的句子/7876</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/c7ecd8adcd43f125118bf66edf101d47.jpg" alt="奇妙物语" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>经典台词/4657</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/77975f3100b4bcdae2672cefbc078208.jpg" alt="浮世汇" width="300" height="200">
+                </a>
+                <div class="desc " ><kbd>黑白大片/1231</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/a873dfff3750461e8e0ffb0f1538260a.jpg" alt="读心术" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>美文摘抄/3134</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/e67ba528fa42ff9c9c596438ca8a6a66.jpg" alt="破万卷" width="300" height="200">
+                </a>
+                <div class="desc  "><kbd>看照片猜身高/4524</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/1d43cf1c5353d2ab670fa8d9660356b4.jpg" alt="审片室" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>三行情书/14443</kbd></div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://hpimg.pianke.com/95306e1c2cea6c69c8a3d18bd3734bd820170113.jpg" alt="破万卷" width="300" height="200">
+                </a>
+                <div class="desc " ><kbd>给力的照片都在这/4635</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://qnstatic.pianke.me/tagpic/242e213f7ace24f2c1bfb5a59a3e1f8b.jpg" alt="审片室" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>自拍狂魔/3620</kbd></div>
+            </div>
+        </div>
+    </div>
+
+    <!--文章-->
+    <div class="  col-sm-10 col-sm-offset-1 " style="height: 50px;margin-top: 30px;margin-bottom: 20px;background-color: lightgrey">
+        <h3 class="	fa fa-hourglass-half" >全部碎片</h3>
+    </div>
+    <!--碎片-->
+    <div id ="Articles" class=" col-sm-10 col-sm-offset-1 " >
+        <!--瀑布流-->
+        <div class="grid col-sm-12 ">
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;width2 grid-item&#45;&#45;height2"></div>-->
+
+            <img class="grid-item grid-item&#45;&#45;height2" src="http://pkimg.image.alimmdn.com/upload/20180707/4ea5f508eeba842c6c1963c0b563794d.jpg@300w_85Q.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item--width2 grid-item--height2" src="http://www.runoob.com/wp-content/uploads/2016/04/img_forest.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/09a472f121b01e82ca24ef60cd117af720180603.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item&#45;&#45;width2 grid-item&#45;&#45;height2" src="http://pkimg.image.alimmdn.com/upload/20180814/2b7469ed7013db2de5d7029a134b49cf.jpg@300w_85Q.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item&#45;&#45;height2" src="http://hpimg.pianke.com/6650d44caf023079e3d18a21ba71891e20181027.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item--width2 grid-item--height2" src="http://hpimg.pianke.com/7d87ef40046294ebdaac362e4b9aae1b20181027.png" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/6303093064c1620ec91ed1565dea0d3820181027.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item grid-item&#45;&#45;height3" src="http://hpimg.pianke.com/5909d737be0f6cc021ad64e189419fd220181027.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item&#45;&#45;height2" src="http://hpimg.pianke.com/d12763c600e7e387fac3a96a05ce602620181027.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item&#45;&#45;height2" src="http://pkimg.image.alimmdn.com/upload/20180831/66bbbfefa32f35a4cbef3d233e5b907b.jpg@300w_85Q.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/2caf3bd2427c31c9b48a5cc1a243ed0220181027.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item--width2 grid-item--height2" src="http://hpimg.pianke.com/e011b8d82805de2958d22506c1db72c920170812.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item grid-item&#45;&#45;height3" src="http://www.runoob.com/wp-content/uploads/2016/04/img_fjords.jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item--width2 grid-item--height2" src="http://hpimg.pianke.com/9f881190177c8efa8b4a54bbd15b5a6f20181027.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/f7c4a983d324810baffe14ac80b160be20170812.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item&#45;&#45;width2 grid-item&#45;&#45;height2" src="http://hpimg.pianke.com/bb274005f9ffde89b93ba1529bd1c13320170824.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://www.runoob.com/wp-content/uploads/2016/04/img_fjords.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item--width2 grid-item--height2" src="http://www.runoob.com/wp-content/uploads/2016/04/img_forest.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/67533bac85e05ec3b3d6da66abe0255f20170630.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item--width2 grid-item--height2" src="http://pkimg.image.alimmdn.com/upload/20180929/a3504425c287a6a12025d07218b35341.png@300w_85Q.jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item&#45;&#45;width2 grid-item&#45;&#45;height2" src="http://pkimg.image.alimmdn.com/upload/20180910/d8af117b261926e48c758c2155514d6e.jpg@300w_85Q.jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/ae6398fb5cdd827a903d0f0454b3df0120180812.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item--width2 grid-item--height3" src="http://hpimg.pianke.com/4c8cb2d36fecd4c4ef5b7d7fdf79230720180722.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item--width2 grid-item--height2" src="http://hpimg.pianke.com/0b77466377581ca94b36c6ef56b7c21420181027.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item " src="http://hpimg.pianke.com/a5ef4bd001eb3188095b6f78f22fd00620180721.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item  grid-item--height2" src="http://hpimg.pianke.com/b3a4f266988c7c342acd1a091620645020170814.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item--width2 grid-item--height3" src="http://hpimg.pianke.com/9136dbb7909ed78d2ac51c8152286ebf20170812.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item--width2 " src="http://hpimg.pianke.com/80402dbf5925314ab80f4ebc9404e32720170801.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+           <img class="grid-item grid-item--width2 grid-item--height3" src="http://hpimg.pianke.com/7b3c5083871f2d2f1c37caea69c7b12c20170720.png?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+            <img class="grid-item grid-item--width2 grid-item--height2" src="http://hpimg.pianke.com/d850374bdcb88b8db64f7ae35f7db3a920170710.jpg?imageView2/2/w/300/format/jpg" alt="Trolltunga Norway" >
+
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;height2"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;width2 grid-item&#45;&#45;height3"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;height2"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;width2 grid-item&#45;&#45;height2"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;width2"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;height2"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;height3"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;height2"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item"></div>-->
+            <!--<div class="grid-item grid-item&#45;&#45;height2"></div>-->
+        </div>
+
+        
+        <div class="clearfix"></div>
+        <a href="#" class="col-sm-1 fa fa-chevron-down fa-2x" style="margin-left: 450px"></a>
+
+    </div>
+
+
+
+
+</section>
+<!--底部注脚-->
+<!--内容折叠-->
+<div id="accordion" class="text-center" style="background-color: slategray;">
+    <h3 >地址</h3>
+    <div >
+        <p> <kbd>地址：</kbd>广东省中山市石岐区学院路电子科技大学中山学院</p><br>
+        <P>A实验楼201</P>
+    </div>
+    <h3 style="background-color: slategray">联系我们</h3>
+    <div >
+        <p>
+            <kbd>QQ:</kbd>2088670257<br>
+            <kbd>邮箱：</kbd> beichen@yes-go.cn<br>
+        </p>
+    </div >
+    <h3>投稿</h3>
+    <div class="left">
+        <p>写给未来会给我们投稿的你</p>
+        <p>
+            <kbd>题材：</kbd>对于题材来说，从来不会设限，文章的字数在1500字 - 2500 字之间为好。<br>
+            <kbd>内容：</kbd>对于内容，“走心”是我们最重要的标准。而另外，我们也希望关注大家正在关注、在乎的事情。<br>
+            <kbd>方式：</kbd>投稿格式方面，希望你以添加 Word 文档到附件,方便查看和修改。<br>
+            <kbd>方式：</kbd>我们的税前稿费是：1000 元，以后也会继续提高。
+        </p>
+    </div>
+</div>
+<div class="jumbotron text-center" style="margin-bottom:0;background-color: slategray;height: 200px">
+
+    <div class="logo-bottom col-sm-1 "><img src="../static/img/logo_bottom.png"></div>
+    <p style="font-size: medium;color: white">复杂世界里，一个就够了.One is all</p><br>
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+
+    <div class="col-sm-4 col-sm-offset-4"><p class="col-sm-offset-1 fa fa-facebook-official "></p><p class="col-sm-offset-1 fa fa-github"></p><p class=" col-sm-offset-1 fa fa-qq"></p><p class=" col-sm-offset-1 fa fa-snapchat"></p></div>
+    <div class="col-sm-1 col-sm-offset-10 " style="margin-top: -110px" ><img src="../static/img/scan.png"></div>
+</div>
+<!--置顶按钮-->
+<button id="btn_top" class="fa fa-arrow-circle-up text-success fa-2x " style="width: 40px;height: 40px" title="回到顶部">
+</button>
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<!--Masonry-->
+<script src="../static/assets/Masonry/masonry-docs.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+<!--页面 自定义 JS-->
+<script>
+    //Masonry实现瀑布流
+    // external js: masonry.pkgd.js
+
+    var grid = document.querySelector('.grid');
+    var msnry = new Masonry( grid, {
+        columnWidth: 160
+    });
+
+    grid.addEventListener( 'click', function( event ) {
+        // don't proceed if item was not clicked on
+        if ( !matchesSelector( event.target, '.grid-item' ) ) {
+            return;
+        }
+        // change size of item via class
+        event.target.classList.toggle('grid-item--gigante');
+        // trigger layout
+        msnry.layout();
+    });
+
+
+
+    // 回到顶部
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 50) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        });
+    });
+    $('#btn_top').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 500);
+    });
+    // 底部折叠
+    $(function() {
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+        $( "#accordion" ).accordion({
+            icons: icons
+        });
+        $( "#toggle" ).button().click(function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    });
+    // 日期
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+</script>
+</body>
+</html>

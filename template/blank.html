@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+    <!--页面 自定义 样式-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form-inline{
+            margin-top: 3px;
+        }
+        .nav-item .nav-link{
+            color: blue;
+        }
+        /*导航*/
+        .navbar .nav{
+            background-color: white;
+            margin-bottom: 0;
+        }
+
+        h1,hr{
+            padding-top: 50px;
+            font-size: 70px;
+        }
+
+        .message p{
+            color: blue;
+        }
+
+        #btn_top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+        }
+
+        #accordion h3{
+            background-color: slategray
+
+        }
+        * { box-sizing: border-box; }
+
+        body { font-family: sans-serif; }
+
+        /* ---- grid ---- */
+
+        .grid {
+            background: #EEE;
+            max-width: 1200px;
+        }
+
+        /* clearfix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ---- grid-item ---- */
+
+        .grid-item {
+            width: 160px;
+            height: 120px;
+            float: left;
+            background: #D26;
+            border: 2px solid #333;
+            border-color: hsla(0, 0%, 0%, 0.5);
+            border-radius: 5px;
+        }
+
+        .grid-item--width2 { width: 320px; }
+        .grid-item--width3 { width: 480px; }
+        .grid-item--width4 { width: 640px; }
+
+        .grid-item--height2 { height: 200px; }
+        .grid-item--height3 { height: 260px; }
+        .grid-item--height4 { height: 360px; }
+
+
+        .grid-item--gigante {
+            width: 320px;
+            height: 360px;
+            z-index: 2; /* above other items */
+        }
+
+        .grid-item:hover {
+            background: #A2C;
+            border-color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar " >
+    <!-- 导航栏 -->
+    <ul class="nav nav-tabs ">
+        <li class="nav-item col-md-1">
+            <img src="../static/img/header-image.jpg" style="height: 30px;width: 80px;padding-top: 6px">
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link active fa fa-home" href="home.html">首页</a>
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link fa fa-chrome" href="moments.html">片刻</a>
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link fa fa-stack-exchange" href="reader.html">阅读</a>
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link 	fa fa-youtube-play" href="radio-station.html">电台</a>
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link disabled fa fa-joomla" href="#">关于</a>
+        </li>
+        <!--搜索框-->
+        <li class="nav-item col-md-4 ">
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search Something">
+                <button class="btn btn-default" type="button">搜索</button>
+            </form>
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link fa fa-user-circle" href="login.html">登录</a>
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link fa fa-address-card-o" href="register.html">注册</a>
+        </li>
+    </ul>
+</header>
+<!--主体内容-->
+<section class="container-fluid">
+    <h1>Masonry - layout method, vanilla JS</h1>
+    <div class="grid col-sm-10 col-sm-offset-1">
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2 grid-item--height2"></div>
+        <div class="grid-item grid-item--height3"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item grid-item--width3"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item grid-item--width2 grid-item--height3"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--width2 grid-item--height2"></div>
+        <div class="grid-item grid-item--width2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height3"></div>
+        <div class="grid-item grid-item--height2"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item grid-item--height2"></div>
+    </div>
+
+
+</section>
+<!--内容折叠-->
+
+<div id="accordion" class="text-center" style="background-color: slategray;">
+    <h3 >地址</h3>
+    <div >
+        <p> <kbd>地址：</kbd>广东省中山市石岐区学院路电子科技大学中山学院</p><br>
+        <P>A实验楼201</P>
+    </div>
+    <h3 style="background-color: slategray">联系我们</h3>
+    <div >
+        <p>
+            <kbd>QQ:</kbd>2088670257<br>
+            <kbd>邮箱：</kbd> beichen@yes-go.cn<br>
+
+        </p>
+    </div >
+    <h3>投稿</h3>
+    <div class="left">
+        <p>写给未来会给我们投稿的你</p>
+
+        <p>
+            <kbd>题材：</kbd>对于题材来说，从来不会设限，文章的字数在1500字 - 2500 字之间为好。<br>
+            <kbd>内容：</kbd>对于内容，“走心”是我们最重要的标准。而另外，我们也希望关注大家正在关注、在乎的事情。<br>
+            <kbd>方式：</kbd>投稿格式方面，希望你以添加 Word 文档到附件,方便查看和修改。<br>
+            <kbd>方式：</kbd>我们的税前稿费是：1000 元，以后也会继续提高。
+
+        </p>
+
+    </div>
+
+</div>
+
+<!--底部注脚-->
+<div class="jumbotron text-center" style="margin-bottom:0;background-color: slategray;height: 200px">
+    <div class="logo-bottom col-sm-1 "><img src="../static/img/logo_bottom.png"></div>
+    <p style="font-size: medium;color: white">复杂世界里，一个就够了.One is all</p><br>
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+
+    <div class="col-sm-4 col-sm-offset-4"><p class="col-sm-offset-1 fa fa-facebook-official "></p><p class="col-sm-offset-1 fa fa-github"></p><p class=" col-sm-offset-1 fa fa-qq"></p><p class=" col-sm-offset-1 fa fa-snapchat"></p></div>
+    <div class="col-sm-1 col-sm-offset-10 " style="margin-top: -110px" ><img src="../static/img/scan.png"></div>
+</div>
+
+<!--置顶按钮-->
+<button id="btn_top" class="fa fa-arrow-circle-up text-success fa-2x " style="width: 40px;height: 40px" title="回到顶部">
+</button>
+
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<script src="../static/assets/Masonry/masonry-docs.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+<!--页面 自定义 JS-->
+<script>
+    // external js: masonry.pkgd.js
+
+    var grid = document.querySelector('.grid');
+    var msnry = new Masonry( grid, {
+        columnWidth: 160
+    });
+
+    grid.addEventListener( 'click', function( event ) {
+        // don't proceed if item was not clicked on
+        if ( !matchesSelector( event.target, '.grid-item' ) ) {
+            return;
+        }
+        // change size of item via class
+        event.target.classList.toggle('grid-item--gigante');
+        // trigger layout
+        msnry.layout();
+    });
+
+
+    // 回到顶部
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 50) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        });
+    });
+    $('#btn_top').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 500);
+    });
+    // 底部折叠
+    $(function() {
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+        $( "#accordion" ).accordion({
+            icons: icons
+        });
+        $( "#toggle" ).button().click(function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    });
+</script>
+</body>
+</html>

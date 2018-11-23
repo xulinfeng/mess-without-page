@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>杂乱无章</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+    <link rel="bookmark" href="../static/img/favicon.ico"/>
+    <!--Bookstrap 核心 CSS文件-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../static/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--font-awesome--图标-->
+    <link rel="stylesheet" href="../static/assets/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery UI-->
+    <link  rel="stylesheet" type="text/css" href="../static/assets/jqueryUI/jquery-ui.css">
+    <!--站点 自定义 样式-->
+    <link rel="stylesheet" href="../static/css/site.css">
+    <!--页面 自定义 样式-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .form-inline{
+            margin-top: 3px;
+        }
+        .nav-item .nav-link{
+            color: blue;
+        }
+        /*导航*/
+        .navbar .nav{
+            background-color: white;
+            margin-bottom: 0;
+        }
+
+        h1,hr{
+            padding-top: 50px;
+            font-size: 70px;
+        }
+
+        .message p{
+            color: blue;
+        }
+
+        #btn_top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+        }
+
+        #accordion h3{
+            background-color: slategray
+
+        }
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-caption{
+            color:blue;
+            font-size: large;
+        }
+        body{
+            background-image: url("../static/img/白刷.png");
+        }
+        #Articles,#Articles1,#Articles2{
+         height: 200px;margin-top: 30px;margin-bottom: 20px;background-color: gainsboro;
+        }
+        /*详细分类*/
+        div.img {
+            margin: 30px;
+            /*padding: 30px;*/
+
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.img:hover {
+            border: 1px solid #777;
+        }
+
+        div.img img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        /*阴影*/
+        /*section .responsive{*/
+            /*box-shadow: 10px 10px 5px #888888;*/
+        /*}*/
+        .free-writing,.topic{
+         margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .text-center a img:hover {
+            border: 2px solid black;
+        }
+        .carousel-caption{
+          font-size: xx-large;
+        }
+      #Articles .article-info-box .article-title a{
+          text-decoration: none;
+          color: white;
+          font-size: x-large;
+
+
+
+      }
+        #Articles .article-info-box .article-title a:hover{
+            background-color: blue;
+        }
+        #Articles1 .article-info-box .article-title a:hover{
+            background-color: blue;
+        }
+        #Articles2 .article-info-box .article-title a:hover{
+            background-color: blue;
+        }
+
+        #Articles1 .article-info-box .article-title a{
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+
+        }
+        #Articles2 .article-info-box .article-title a{
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+
+        }
+        #Articles .article-others{
+            color: blue;
+            width: 250px;
+
+        }
+        #Articles .article-others:hover{
+            background-color: whitesmoke;
+
+        }
+        #Articles1 .article-others{
+            color: blue;
+            width: 250px;
+
+        }
+        #Articles1 .article-others:hover{
+            background-color: whitesmoke;
+
+        }
+        #Articles2 .article-others{
+            color: blue;
+            width: 250px;
+
+        }
+        #Articles2 .article-others:hover{
+            background-color: whitesmoke;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+<!--顶部导航栏-->
+<header class="navbar " >
+    <!-- 导航栏 -->
+    <ul class="nav nav-tabs " >
+        <li class="nav-item col-md-1">
+            <img src="../static/img/header-image.jpg" style="height: 30px;width: 80px;padding-top: 6px">
+        </li>
+        <li class="nav-item col-md-1" style="display: inline">
+            <a class="nav-link active" href="home.html">首页</a>
+            <!--fa fa-home-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link  " href="moments.html">片刻</a>
+            <!--fa fa-chrome-->
+        </li>
+        <li class="nav-item col-md-1">
+            <a class="nav-link " href="reader.html">阅读</a>
+            <!--fa fa-stack-exchange-->
+        </li>
+        <!--<li class="nav-item col-md-1">-->
+        <!--<a class="nav-link 	fa fa-youtube-play" href="radio-station.html">电台</a>-->
+        <!--</li>-->
+        <li class="nav-item col-md-1">
+            <a class="nav-link disabled " href="about.html">关于</a>
+            <!--fa fa-joomla-->
+        </li>
+        <!--搜索框-->
+        <li class="nav-item col-md-4 ">
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search Something">
+                <button class="btn btn-default" type="button">搜索</button>
+            </form>
+        </li>
+        <li class="nav-item col-md-1 col-sm-offset-1">
+            <a class="nav-link " href="login.html" >登录</a>
+            <!--fa fa-user-circle-->
+        </li>
+        <li class="nav-item col-md-1 ">
+            <a class="nav-link" href="register.html">注册</a>
+            <!--fa fa-address-card-o-->
+        </li>
+    </ul>
+</header>
+
+
+<!--主体内容-->
+<section class="container-fluid" >
+    <div id="myCarousel" class="carousel slide " style="height: 370px">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner " >
+            <div class="item active">
+                <img src="https://img.ssyer.com//picture/new/tI0tYz5qOF.jpeg" alt="First slide">
+                <div class="carousel-caption" ><kbd>在这个世界上</kbd></div>
+            </div>
+            <div class="item">
+                <img src="https://img.ssyer.com//picture/new/KBTJU2ZEIe.jpeg" alt="Second slide">
+                <div class="carousel-caption " ><kbd >有好有坏</kbd></div>
+            </div>
+            <div class="item">
+                <img style="height: 370px" src="http://static.runoob.com/images/mix/img_fjords_wide.jpg" alt="Third slide">
+                <div class="carousel-caption"><kbd>有杂乱也有无章</kbd></div>
+            </div>
+            <div class="item">
+                <img style="height: 370px" src="../static/img/24hours.jpg" alt="Second slide">
+                <div class="carousel-caption"><kbd>在杂乱的阅读世界里</kbd></div>
+            </div>
+            <div class="item">
+                <img style="height: 370px" src="../static/img/topic.jpg" alt="Third slide">
+                <div class="carousel-caption"><kbd>遇见更好的自己</kbd></div>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+    <!--分类标题-->
+    <div class=" col-sm-10 col-sm-offset-1 "  style="height: 50px;margin-top: 30px;margin-bottom: 20px;background-color: lightgrey">
+        <h3 class="fa fa-align-justify fa-x" >分类 | Classification</h3>
+
+    </div>
+    <div class="col-sm-10 col-sm-offset-1 " style="height: 400px;margin-top: 30px;margin-bottom: 20px;background-color: gainsboro">
+        <!--详细分类-->
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo1.jpg">
+                    <img src="http://hpimg.pianke.com/fbd889ec355b066d6511cbe6e1b0cfda20170111.jpg" alt="早安故事" width="300" height="300">
+                </a>
+                <div class="desc"><kbd>Story/1061篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo2.jpg">
+                    <img src="http://hpimg.pianke.com/95306e1c2cea6c69c8a3d18bd3734bd820170113.jpg" alt="晚安故事" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>Essay/836篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://pkimg.image.alimmdn.com/upload/20160819/f0ee4db57ae8d1e26b7bbbacd3ad0f1b.JPG"alt="生活范" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>Lifestyle/147篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://hpimg.pianke.com/e2fe4150cd894b4bead7fb237f30fa2c20170110.jpg" alt="奇妙物语" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>Fantasy/249篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://hpimg.pianke.com/bfc198dd1b13b9fdbb782f296018307820170111.jpg" alt="浮世汇" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>World/515篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://hpimg.pianke.com/1ce5f4769efcd95fb167f01825c4550120170111.jpg" alt="读心术" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>Psychology/243篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo3.jpg">
+                    <img src="http://pkimg.image.alimmdn.com/upload/20170113/cfd56242864499a8a51bd9c164d01ccf.JPG" alt="破万卷" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>Classics/699篇</kbd></div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="img">
+                <a target="_blank" href="http://static.runoob.com/images/demo/demo4.jpg">
+                    <img src="http://hpimg.pianke.com/6d9e964bf2d0af703b1905053e32feb820170112.jpg" alt="审片室" width="300" height="200">
+                </a>
+                <div class="desc"><kbd>Movie/362篇</kbd></div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!--文章-->
+    <div class="  col-sm-10 col-sm-offset-1 " style="height: 50px;margin-top: 30px;margin-bottom: 20px;background-color: lightgrey">
+        <h3 class="fa fa-columns" >热门文章 | Hot Articles</h3>
+    </div>
+    <div id ="Articles" class=" col-sm-10 col-sm-offset-1 " >
+        <div class="article-info-box">
+            <div class="article-title">
+                <a href="#" target="_blank">
+                    新的一年，你不解决这五件事，就不要奋斗了
+                </a>
+            </div>
+            <div class="article-author">
+                <a href="#" target="_blank" >
+                    By&nbsp;/&nbsp;陈慕妤
+                </a>
+            </div>
+            <div class="article-content">
+               <kbd>2018年，已经正式开始。</kbd> 2018年，已经正式开始。新的一年，应该有新的展望和规划。如果你今年的习惯性行为，与往年一样，没有变化，那你只不过重复了又一年的2017而已，人生依然不会获得高品质的提升。美国作家兰德尔·贾雷尔说过，如果你被置于某种地位的时间足够长久，你的行为，就会开始适应那种地位的要求。这句话可以从两个层面去解读。1 &nbsp;如果你的时间一直停留在去做低价值地位的事情，长此以往，都要以这种地...
+                <span class="view-all">
+                     <a href="#" target="_blank">
+                          VIEW ALL
+                         <img src="http://qnstatic.pianke.me/public/assets/img/viewall.png">
+                     </a>
+                </span>
+            </div>
+        </div>
+        <div class="article-others">
+            38.4 k次阅读&nbsp;&nbsp;|&nbsp;&nbsp;评论:172&nbsp;&nbsp;|&nbsp;&nbsp;喜欢:1.6 k
+        </div>
+
+    </div>
+    <div id ="Articles1" class=" col-sm-10 col-sm-offset-1 " >
+        <div class="article-info-box">
+            <div class="article-title">
+                <a href="#" target="_blank">
+                    缘浅缘深，如溪如河
+                </a>
+            </div>
+            <div class="article-author">
+                <a href="#" target="_blank">By&nbsp;/&nbsp;潘云贵</a>
+            </div>
+            <div class="article-content">
+                <kbd>天还未明，雾气弥漫。</kbd>天还未明，雾气弥漫。我在机场等待航班间隙买了杯热饮，是你喜欢喝的红茶。以前看着杯中茶色，整个人就感觉到暖，好像被人拥抱一般。现在心头还是会有这样的温度，但相比过去，已经疏淡很多，许是因你不在的缘故。身边旅客逐渐多起来。灰色的大衣、略显蓬乱的头发、飘忽的眼神、脸上散发出洁面乳的味道，相比于其他时段的乘客，坐早班机和深夜航班的乘客要显得憔悴、窘迫、忧心忡忡，像被推挤的棋子在棋盘...
+                <span class="view-all">
+                    <a href="#" target="_blank">
+                      VIEW ALL
+                         <img src="http://qnstatic.pianke.me/public/assets/img/viewall.png">
+                    </a>
+                 </span>
+            </div>
+        </div>
+        <div class="article-others">52.3 k次阅读&nbsp;&nbsp;|&nbsp;&nbsp;评论:140&nbsp;&nbsp;|&nbsp;&nbsp;喜欢:1.4 k
+        </div>
+
+    </div>
+    <div id ="Articles2"class=" col-sm-10 col-sm-offset-1 " >
+        <div class="article-info-box">
+            <div class="article-title">
+                <a href="#" target="_blank">
+                    梦侦
+                </a>
+            </div>
+            <div class="article-author">
+                <a href="#" target="_blank">By&nbsp;/&nbsp;阿帆哒</a>
+            </div>
+            <div class="article-content">
+
+                <kbd>{暗区回忆}死者叫彭望，在睡梦中被刀刺中心脏死亡。</kbd>行凶者是他的妻子张姝，她说有人在梦中控制她，让她从床上起来，到厨房拿刀，往丈夫身上扎三次，复睡下。清晨手摸到黏湿的床单，疑惑醒来，看到一片红，刀就在身边。张姝的睡袍也染了大片血。她唇色白，瑟瑟发抖，蓬松的长发中掺杂白丝，似乎是一夜之间冒出。双眼干涸，鱼尾纹在蜡黄的肤上像土地裂痕。脸腮凹陷，致颧骨突出，整个人干瘪，像身内有黑洞，使她日渐收缩。五官都在...
+
+                <span class="view-all">
+                    <a href="#" target="_blank">
+                      VIEW ALL
+                         <img src="http://qnstatic.pianke.me/public/assets/img/viewall.png">
+                    </a>
+                 </span>
+            </div>
+        </div>
+        <div class="article-others">52.3 k次阅读&nbsp;&nbsp;|&nbsp;&nbsp;评论:140&nbsp;&nbsp;|&nbsp;&nbsp;喜欢:1.4 k
+        </div>
+
+    </div>
+
+
+    <!--底部三张照片-->
+<div class="text-center">
+
+    <div class="free-writing ">
+        <a href="#" target="_blank">
+            <img src="http://qnstatic.pianke.me/public/assets/img/24hours.jpg">
+        </a>
+    </div>
+    <div class="topic">
+        <a href="#" target="_blank">
+            <img src="http://qnstatic.pianke.me/public/assets/img/topic.jpg">
+        </a>
+    </div>
+    <div style="margin-top: 0;" class="topic">
+        <a href="#" target="_blank">
+            <img src="http://qnstatic.pianke.me/public/assets/img/wordcard.jpg">
+        </a>
+    </div>
+</div>
+
+</section>
+<!--底部注脚-->
+<!--内容折叠-->
+<div id="accordion" class="text-center" style="background-color: slategray;">
+    <h3 >地址</h3>
+    <div >
+        <p> <kbd>地址：</kbd>广东省中山市石岐区学院路电子科技大学中山学院</p><br>
+        <P>A实验楼201</P>
+    </div>
+    <h3 style="background-color: slategray">联系我们</h3>
+    <div >
+        <p>
+            <kbd>QQ:</kbd>2088670257<br>
+            <kbd>邮箱：</kbd> beichen@yes-go.cn<br>
+        </p>
+    </div >
+    <h3>投稿</h3>
+    <div class="left">
+        <p>写给未来会给我们投稿的你</p>
+        <p>
+            <kbd>题材：</kbd>对于题材来说，从来不会设限，文章的字数在1500字 - 2500 字之间为好。<br>
+            <kbd>内容：</kbd>对于内容，“走心”是我们最重要的标准。而另外，我们也希望关注大家正在关注、在乎的事情。<br>
+            <kbd>方式：</kbd>投稿格式方面，希望你以添加 Word 文档到附件,方便查看和修改。<br>
+            <kbd>方式：</kbd>我们的税前稿费是：1000 元，以后也会继续提高。
+        </p>
+    </div>
+</div>
+<div class="jumbotron text-center" style="margin-bottom:0;background-color: slategray;height: 200px">
+
+    <div class="logo-bottom col-sm-1 "><img src="../static/img/logo_bottom.png"></div>
+    <p style="font-size: medium;color: white">复杂世界里，一个就够了.One is all</p><br>
+    <p style="font-size: small;color: whitesmoke"><kbd>@何伟志的课程设计</kbd></p>
+
+    <div class="col-sm-4 col-sm-offset-4"><p class="col-sm-offset-1 fa fa-facebook-official "></p><p class="col-sm-offset-1 fa fa-github"></p><p class=" col-sm-offset-1 fa fa-qq"></p><p class=" col-sm-offset-1 fa fa-snapchat"></p></div>
+    <div class="col-sm-1 col-sm-offset-10 " style="margin-top: -110px" ><img src="../static/img/scan.png"></div>
+</div>
+<!--置顶按钮-->
+<button id="btn_top" class="fa fa-arrow-circle-up text-success fa-2x " style="width: 40px;height: 40px" title="回到顶部">
+</button>
+<!--JQuery文件务必在bootstrap.min.js 之前引入-->
+<script src="../static/assets/jquery/jquery-2.1.4.min.js"></script>
+<!--Boobstrap 核心 JaveScript 文件-->
+
+<script src="../static/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+<!--jquery UI-->
+<script src="../static/assets/jqueryUI/jquery-ui.min.js"></script>
+<!--站点 自定义 函数库-->
+<script src="../static/js/site.js"></script>
+<!--页面 自定义 JS-->
+<script>
+
+
+    // 回到顶部
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 50) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        });
+    });
+    $('#btn_top').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 500);
+    });
+    // 底部折叠
+    $(function() {
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+        $( "#accordion" ).accordion({
+            icons: icons
+        });
+        $( "#toggle" ).button().click(function() {
+            if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+                $( "#accordion" ).accordion( "option", "icons", null );
+            } else {
+                $( "#accordion" ).accordion( "option", "icons", icons );
+            }
+        });
+    });
+</script>
+</body>
+</html>
